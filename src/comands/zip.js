@@ -1,7 +1,7 @@
 import { createReadStream, createWriteStream } from 'node:fs';
 import { pipeline } from 'node:stream/promises';
-import { resolve, basename, join } from 'node:path';
-import { createGzip, createUnzip, createBrotliCompress, createBrotliDecompress } from 'node:zlib';
+import { resolve } from 'node:path';
+import { createBrotliCompress, createBrotliDecompress } from 'node:zlib';
 
 export const compress = async (arg1, arg2) => {
   const source = resolve(arg1);
